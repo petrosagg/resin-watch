@@ -29,3 +29,8 @@ sync
 
 #su - pi -c startx &
 su - pi -c "env FRAMEBUFFER=/dev/fb1 startx &" # Note that this will change if we restart the container
+
+while true; do
+	ntpdate stratum2.ord2.publicntp.net
+	sleep 60
+done

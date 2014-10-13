@@ -110,10 +110,11 @@
 			s1: ~~(secs / 10),
 			s2: secs % 10
 		});
+
+		setTimeout(updateTime, 1000 - (Date.now() % 1000));
 	}
 
 	updateTime();
-	setInterval(updateTime, 1000);
 
 	// TWEETS
 
